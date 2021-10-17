@@ -6,47 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ki kicsoda - Erich Fromm</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/lib/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav id="menu">
-        <a href="/">Kezdőolal</a>
-        <a href="works.html">Művei</a>
-        <a href="gallery.html">Galéria</a>
-        <a href="about.html">Részletek</a>
-    </nav>
-    <header>
-        <h1>Ki kicsoda?</h1>
-        <div class="person-name">
-            <h2>Erich Fromm</h2>
+    <header id="top">
+        <div class="title">
+            <a href="/"><h2>Ki kicsoda - Erich Fromm</h2></a>
         </div>
+        <nav id="menu">
+            <a href="/" class="nav-active">Áttekintés</a>
+            <a href="works.html">Művek</a>
+            <a href="gallery.html">Galéria</a>
+            <a href="about.html">Életrajz</a>
+        </nav>
     </header>
     <main>
-        <section class="person-about">
+        <section id="person-about">
             <div class="description">
+                <h2>Röviden</h2>
                 <p>
-                    Erich Fromm egy német-amerikai (Frankfurt am Main, Németország, 1900. március 23. – Muralto, Ticino
+                    <a href="https://hu.wikipedia.org/wiki/Erich_Fromm">Erich Fromm</a> egy német-amerikai (Frankfurt am
+                    Main, Németország, 1900. március 23. – Muralto, Ticino
                     kanton, Svájc, 1980. március 18.) filozófus, szociálpszichológus.
                 </p>
                 <p>A 20. század jelentős humanistája, író, valamint gyakorló pszichoanalitikus, aki
-                    bírálta Sigmund Freudot.</p>
+                    bírálta <a href="https://hu.wikipedia.org/wiki/Sigmund_Freud">Sigmund Freud-ot</a>.</p>
             </div>
             <div class="photos">
                 <img src="./images/photo1.jpg" alt="Fotó a személyről">
                 <img src="./images/photo2.jpg" alt="Fotó a személyről">
             </div>
         </section>
-        <section class="known-for">
+        <section id="person-known-for">
             <h2>Miről ismert?</h2>
-            <div class="flex-container">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+            <div class="row">
+                <div class="column">"Birtokolni vagy létezni"</div>
+                <div class="column">Karakterorientáció</div>
+                <div class="column">Biztonság vs. szabadság</div>
             </div>
         </section>
     </main>
     <footer>
-        <a href="#menu"><button>vissza</button></a>
+        <a href="#top"><button><i class="fa fa-chevron-up"></i></button></a>
+        <ul>
+            <li>
+                <a href="/" class="nav-active">Áttekintés</a>
+            </li>
+            <li>
+                <a href="works.html">Művek</a>
+            </li>
+            <li>
+                <a href="gallery.html">Galéria</a>
+            </li>
+            <li>
+                <a href="about.html">Életrajz</a>
+            </li>
+        </ul>
     </footer>
 </body>
 
