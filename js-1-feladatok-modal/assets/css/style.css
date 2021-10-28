@@ -1,0 +1,110 @@
+body {
+    z-index: 0;
+    margin: 2em;
+}
+
+.layer--hidden {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.layer--visible {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 50%;
+    background-color: rgb(50, 50, 50);
+    transition: opacity 0.15s ease-in-out;
+    z-index: 2;
+}
+
+section.modal--hidden {
+    display: none;
+    opacity: 0%;
+    transition: opacity 0.15s ease-in-out;
+}
+
+section.modal--visible {
+    opacity: 100%;
+    transition: opacity 0.15s ease-in-out;
+}
+
+section.modal {
+    background-color: white;
+    position: absolute;
+    display: flex;
+    height: auto;
+    width: 50%;
+    top: 33%;
+    left: 20%;
+    border: 2px solid #ccc;
+    padding: 0.5em 2em 2.5em 2em;
+    z-index: 4;
+}
+
+section.modal__content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 2;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px grey;
+    text-align: justify;
+}
+
+.modal__button--close {
+    float: right;
+    border: none;
+    background-color: white;
+    font-size: 1.5em;
+}    
+
+section.modal header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section.modal article {
+    font-size: 0.95em;
+}
+
+section.modal footer {
+    float: right;
+    margin-top: 2em;
+}    
+
+.modal__button--ok,
+.modal__button--cancel {
+    border: 2px solid white;
+    color: white;
+    padding: 0.5em 1em 0.5em 1em;
+    opacity: 60%;
+}    
+
+.modal__button--ok {
+    background-color: green;
+}    
+
+.modal__button--cancel {
+    background-color: red;
+}    
+
+.modal__button--ok:hover,
+.modal__button--cancel:hover {
+    border: 2px solid grey;
+}
+
+@media screen and (max-width: 560px) {
+    section.modal {
+        width: 85%;
+        left: 0;
+    }
+}

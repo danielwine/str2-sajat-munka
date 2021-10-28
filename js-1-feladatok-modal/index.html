@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div onclick="hideModal()"" id="overlay" class="layer--hidden"></div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod culpa provident quae non placeat corporis quis. Assumenda tenetur fugiat sapiente magni, alias, libero molestias facilis, error iste illo necessitatibus cumque.</p>
+    <button onclick="showModal()">Open Modal</button>
+    <section class="modal modal--hidden">
+        <div class="modal__content">
+            <button onclick="hideModal()" class="modal__button--close"><i class="fa fa-close"></i></button>
+            <header>CSSScript.com</header>
+            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus sit
+                excepturi esse, nemo odio maiores. Magni aliquam architecto consequuntur quod earum ducimus similique
+                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic accusamus!
+                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis est
+                eum reiciendis.</article>
+            <footer>
+                <button onclick="hideModal()" class="modal__button--ok">Okey</button>
+                <button onclick="hideModal()" class="modal__button--cancel">Cancel</button>
+            </footer>
+        </div>
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
