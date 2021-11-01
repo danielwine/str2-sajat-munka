@@ -1,0 +1,49 @@
+
+body {
+    background-color: #d1dcdd;
+}
+
+div.container {
+    position: absolute;
+    top: 50% ;
+    left: 50% ;
+    transform: translate(-50% , -50% ) !important;
+}
+
+div.container div.table {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px;
+    background-color: #528abb;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+div.container .table,
+div.container .table .cell{
+    border: 1px solid white;
+}
+
+div.container .cell {
+    min-width: 120px;
+    min-height: 82px;
+    text-align: center;
+    padding-top: 50px;
+    user-select: none;
+}
+
+div.message {
+    margin: 30px 0px 0px 35px;
+}
+button {
+    background-color: green;
+    color: white;
+    opacity: 60%;
+    border-radius: 0;
+    padding: 0.9em 1.5em 0.9em 1.5em;
+    margin: 20px 0px 0px 30px;
+}
+button:hover {
+    opacity: 75%;
+}
