@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <main>
+    </main>
+    <aside>
+        <div class="title">
+            Game of Thrones
+        </div>
+        <article>
+            <div class="picture"><img></div>
+            <div class="name-container">
+                <span class="name"></span>
+                <span class="house"><img></span>
+            </div>
+            <div class="bio"></div>
+        </article>
+        <footer>
+            <div class="search-field">
+                <button id='search-button'><i class="fa fa-chevron-right"></i></button>
+                <div class="search-input">
+                    <button><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search a character">
+                </div>
+            </div>
+        </footer>
+    </aside>
+    <script type="module">
+        import { showCharacters } from './js/got.js';
+        showCharacters();
+    </script>
+</body>
+
+</html>
