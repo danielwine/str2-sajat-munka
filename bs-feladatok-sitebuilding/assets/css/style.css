@@ -1,0 +1,344 @@
+
+@font-face {
+    font-family: Catamaran;
+    src: url("/fonts/catamaran/Catamaran-Light.ttf");
+}
+
+@font-face {
+    font-family: Lato;
+    src: url("/fonts/lato/Lato-Bold.ttf");
+}
+
+@font-face {
+    font-family: Muli;
+    src: url("/fonts/muli/Muli\ Regular\ 400.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    --color-yellow: #fdcc52;   
+    --color-red: #b33e2e;
+    --color-grey: #222222;
+    --color-lightgrey: #646464;
+    --color-fwhite: #e0d0d2;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+nav {
+    font-family: Catamaran, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 4em!important;
+}
+
+h3 {
+    font-size: 3.4em!important;
+}
+
+h4 {
+    font-size: 3em!important;
+}
+
+h5 {
+    font-size: 2.1em!important;
+}
+
+h6 {
+    font-size: 1.25rem!important;
+}
+
+nav {
+    background-color: transparent!important;
+}
+
+.space {
+    padding: 4em 0 4em 0;
+}
+
+.navbar-nav {
+    letter-spacing: 0.1em;
+}
+
+.custom-toggler .navbar-toggler {
+    padding-left: 35px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    height: 15px;
+    width: 15px;
+    margin: 0.5em;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.9)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:before {
+    content: "Menu";
+    position: relative;
+    left: -35px;
+}
+
+.bg-custom {
+    background: white!important;
+}
+
+.bg-custom .navbar-nav a,
+.bg-custom .navbar-brand {
+    color: var(--color-grey)!important;
+}
+
+.bg-custom .navbar-nav a:hover {
+    color: black!important;
+}
+
+.bg-custom .navbar-brand:hover {
+    color: var(--color-yellow)!important;
+}
+
+.navbar-nav a,
+a.btn {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+.navbar-nav a {
+    font-size: 0.8em;
+}
+
+a.btn {
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 0.2em;
+    min-width: 22em;
+    padding: 1.4em;
+    transition: all 0.3s;
+}
+
+a.btn:hover {
+    color: var(--color-yellow);
+    background-color: transparent;
+    border-color: var(--color-yellow);
+    transition: all 0.3s;
+}
+
+p {
+    font-family: Muli, Helvetica, Arial, sans-serif;
+}
+
+section {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+}
+
+.icon {
+    font-size: 5em;
+}
+
+section.screen {
+    padding-top: 2em!important;
+    background-image: url("/img/bg-pattern.png"), 
+                      linear-gradient(to right, #da2632, #7c4394);
+    color: white;   
+}
+
+#screentext {
+    padding: 3em 0 0.6em 0;
+}
+
+section.highlighted {
+    background-color: var(--color-yellow);
+}
+
+section.features p {
+    font-size: 1.2em;
+}
+
+section.features i {
+    color: #A9305D;
+}
+
+section.features hr {
+    color: black;
+}
+
+.sm-icon {
+    border-radius: 100em;
+    padding: 0.6em;
+    color: white;
+    width: 2.25em;
+    font-size: 2.4em!important;
+    opacity: 90%;
+}
+
+.sm-icon:hover {
+    opacity: 100%;
+}
+
+.sm-icon-tw {
+    background-color: #1DA1F3;
+}
+
+.sm-icon-fb {
+    background-color: #3A5796;
+}
+
+.sm-icon-gp {
+    background-color: #CD4635;
+}
+
+section.cta {
+    background-image: url("/img/bg-cta.jpg");
+    background-position: 0px -248px;
+    color: white;
+    background-color: #0007; background-blend-mode: darken;
+}
+
+section.cta .row {
+    height: 66vh;
+}
+
+.img-badge {
+    width: 14em;
+}
+
+.img-phone-container {
+    position: relative;
+    width: 420px;
+    height: 100%;
+}
+
+.img-phone {
+    width: 350px;
+}
+
+.img-phone-screen {
+    width: 307px;
+    position: absolute;
+    top: 82px;
+    left: 57px;
+}
+
+.navbar-brand {
+    color: var(--color-yellow);
+    font-size: 1.4em;
+}
+
+.navbar-brand:hover,
+.navbar-nav a:hover {
+    color: white;
+}
+
+.navbar-nav a {
+    text-transform: uppercase;
+    color: var(--color-fwhite);
+}
+
+@media screen and (max-width:576px) {
+    #screentext {
+        font-size: 1.8em!important;
+        padding-bottom: 1.2em;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width: 992px) {
+    #screentext {
+        font-size: 2.5em!important;
+        padding-bottom: 1.2em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        background-color: white!important;
+    }
+
+    .navbar-brand:hover {
+        color: var(--color-yellow)!important;
+    
+    }
+    .navbar-nav {
+        margin-top: 1.2em;
+        padding-bottom: 0.8em;
+    }
+    .navbar-nav a {
+        color: black;
+    }
+
+    .navbar-nav a:hover {
+        color: grey;
+    }
+
+    section.cta h1 {
+        font-size: 3em!important;
+    }
+
+    section.features .img-phone-container {
+        margin-bottom: 6em;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    #screentext {
+        padding: 2em 0 0.6em 0;
+    }
+    section.features .img-phone-container {
+        position: relative;
+        width: 280px;
+        height: 100%;
+    }
+
+    section.features .img-phone {
+        width: 280px;
+    }
+
+    section.features .img-phone-screen {
+        width: 246px;
+        position: absolute;
+        top: 64px;
+        left: 17px;
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid #ddd !important;
+    border-radius: 5px!important;
+    width: 80px;
+    font-size: 0.9em;
+    padding: 0em;
+    margin: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: 0px 0px 0 1px grey;
+}
+
+footer {
+    font-family: Mulish, Helvetica, Arial, sans-serif;
+    background: var(--color-grey);
+    color: var(--color-lightgrey);
+    padding: 2.5em 0 2em 0;
+}
+
+footer nav ul {
+    width: 160px;
+    list-style-type: none;
+}
+
+footer a {
+    color: var(--color-lightgrey);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--color-yellow);
+}
