@@ -18,15 +18,11 @@ section {
     }
 
     &__row {
-        // text-lg-start!
-        //    text-align: center;
         display: flex;
     }
 
     &__text {
         margin: auto;
-        // text-align: left;
-        // mb-lg-0
         &-h {
             padding: 3em 0 0.6em 0;
         }
@@ -51,7 +47,6 @@ section {
     &__badge {
         width: 14em;
         padding-bottom: 1rem;
-        // pb-lg-0
     }
     &__icons {
         display: block;
@@ -88,7 +83,6 @@ section {
 
         &__item {
             padding-bottom: 3rem;
-            // pb-lg-0
 
             .hr-a {
                 margin-top: 0;
@@ -108,7 +102,7 @@ section {
 .cta {
     background-image: url("/img/bg-cta.jpg");
     background-position: 0px -248px;
-    color: white;
+    color: colors.$white;
     background-color: #0007;
     background-blend-mode: darken;
 
@@ -119,7 +113,6 @@ section {
     &__text {
         margin: auto 0 auto;
         margin-left: 3rem;
-        // ms-lg-0
     }
 }
 

@@ -2,6 +2,9 @@
 
 .navigation-bar {
     position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     z-index: 2;
     top: 0;
     left: 0;
@@ -15,8 +18,9 @@
     &__container {
         align-items: flex-start;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
-        width: 72%;
+        flex-basis: 80%;
     }
     &__brand {
         padding-top: 0.3125rem;
@@ -34,15 +38,14 @@
     }
 
     &__menu {
-        display: none;
         flex-direction: column;
+        flex-shrink: 0;
         list-style: none;
-        margin: 0 auto;
         margin: 0 1em 0 auto;
         padding: 0;
 
         li {
-            text-align: center;
+            text-align: left;
             a {
                 color: colors.$grey;
                 display: block;
@@ -59,15 +62,37 @@
             }
         }
     }
-    &__toggler {
+    &__hamburger {
+        cursor: pointer;
+        box-sizing: initial !important;
         display: flex;
         border: 1px solid colors.$fwhite;
         border-radius: 5px !important;
-        width: 70px;
+        width: 80px;
         font-size: 0.9em;
         padding: 0em;
         padding-left: 0.5em;
         margin: auto 1em auto auto;
+
+        &-icon {
+            box-sizing: initial !important;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            height: 0.8rem;
+            padding: 0.75rem;
+            width: 0.9rem;
+        }
+
+        span {
+            box-sizing: initial !important;
+            background-color: colors.$grey;
+            display: block;
+            height: 0px;
+            width: 1rem;
+            border: 1px solid colors.$black;
+            border-radius: 6px;
+        }
 
         &-caption {
             margin: auto;
@@ -75,38 +100,21 @@
         }
         &:focus,
         &:active {
-            box-shadow: 0px 0px 0 1px grey;
+            box-shadow: 0px 0px 0 1px colors.$lightgrey;
         }
-    }
-
-    &__hamburger {
-        align-items: center;
-        cursor: pointer;
-        display: flex;
-        flex-wrap: wrap;
-        height: 0.8rem;
-        padding: 0.75rem;
-        width: 0.9rem;
-
         &-input[type="checkbox"] {
-            // display: none;
+            display: none;
 
             &:checked + .navigation-bar__menu {
-                display: flex;
+                visibility: visible;
+                opacity: 100%;
+                transition: opacity 0.25s ease-in-out;
             }
-        }
-
-        span {
-            background-color: colors.$grey;
-            display: block;
-            height: 0px;
-            width: 1rem;
-            border: 1px solid black;
-            border-radius: 6px;
         }
     }
 
     &__scrolled {
+        transition: all 0.25s ease-in-out;
         background: colors.$white;
         .navigation-bar__menu {
             li {

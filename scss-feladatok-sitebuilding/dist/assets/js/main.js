@@ -1,19 +1,27 @@
 
+let navbar = document.querySelector('nav.navigation-bar')
 let overlay = document.querySelector('div#overlay');
 let actualModal = null;
 
 document.onreadystatechange = () => {
     if (document.readyState == 'complete') {
         document.onscroll = () => {
-            let navbar = document.querySelector('nav.navigation-bar')
             let scrollTop = window.scrollY;
             if (scrollTop > 200) {
                 navbar.classList.add('navigation-bar__scrolled')
             } else {
-                navbar.classList.remove('navigation-bar__scrolled')
+                let checked = document.querySelector(
+                    '.navigation-bar__hamburger-input[type="checkbox"]').checked;
+                if (!checked) {
+                    navbar.classList.remove('navigation-bar__scrolled')
+                }
             }
         }
     }
+}
+
+const addScrolledClass = () => {
+    navbar.classList.add('navigation-bar__scrolled')
 }
 
 const showModal = (modalId) => {

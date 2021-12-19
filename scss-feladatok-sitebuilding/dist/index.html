@@ -15,44 +15,17 @@
 </head>
 
 <body>
-
-    <!-- <header>
-        <nav class="navbar custom-toggler fixed-top pt-2 justify-content-center navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#anchor-download">Download</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#anchor-features">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#anchor-contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header> -->
-
     <header>
         <nav class="navigation-bar">
             <div class="navigation-bar__container">
                 <a class="navigation-bar__brand" href="#">Start Bootstrap</a>
-                <div class="navigation-bar__toggler">
-                    <div class="navigation-bar__toggler-caption">Menu</div>
-                    <label class="navigation-bar__hamburger" for="menu">
+                <label class="navigation-bar__hamburger" onClick="addScrolledClass()" for="menu">
+                    <div class="navigation-bar__hamburger-caption">Menu</div>
+                    <div class="navigation-bar__hamburger-icon">
                         <span></span><span></span><span></span>
-                    </label>
-                    <input class="navigation-bar__hamburger-input" type="checkbox" id="menu">
-                </div>
+                    </div>
+                </label>
+                <input class="navigation-bar__hamburger-input" type="checkbox" id="menu">
                 <ul class="navigation-bar__menu">
                     <li><a href="#anchor-download">Download</a></li>
                     <li><a href="#anchor-features">Features</a></li>
@@ -67,7 +40,8 @@
             <div class="screen__container container">
                 <div class="screen__row row">
                     <div class="screen__text col-lg-5 offset-lg-1 ">
-                        <h3 class="screen__text-h">New Age is an app landing page that will help you beautifully showcase
+                        <h3 class="screen__text-h">New Age is an app landing page that will help you beautifully
+                            showcase
                             your new mobile app, or anything else!
                         </h3>
                         <a name="" id="" class="button" href="#anchor-download" role="button">Start
@@ -97,8 +71,7 @@
                             <img class="highlighted__badge" src="./img/google-play-badge.svg"
                                 alt="App on Google Play"></a>
                         <a href="https://www.apple.com/app-store/">
-                            <img class="highlighted__badge" src="./img/app-store-badge.svg"
-                                alt="App on Google Play">
+                            <img class="highlighted__badge" src="./img/app-store-badge.svg" alt="App on Google Play">
                         </a>
                     </div>
                     <div class="space"></div>
@@ -188,13 +161,11 @@
                     </div>
                 </div>
                 <div class="highlighted__icons row">
-                    <a href="https://twitter.com" data-toogle="tooltip" data-placement="top"
-                        title="Twitter">
+                    <a href="https://twitter.com" data-toogle="tooltip" data-placement="top" title="Twitter">
                         <i class="fa fa-twitter sm-icon sm-icon-tw" aria-hidden="true"></i></a>
                     <a href="https://facebook.com" data-toogle="tooltip" data-placement="top" title="Facebook">
                         <i class="fa fa-facebook sm-icon sm-icon-fb" aria-hidden="true"></i></a>
-                    <a href="https://google.com" data-toogle="tooltip" data-placement="top"
-                        title="Google">
+                    <a href="https://google.com" data-toogle="tooltip" data-placement="top" title="Google">
                         <i class="fa fa-google-plus sm-icon sm-icon-gp" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -230,14 +201,18 @@
     </footer>
 
     <div onclick="hideModal()"" id="overlay" class="layer--hidden"></div>
+
     <section class="modal modal--hidden" id='privacyModal'>
         <div class="modal__content">
             <button onclick="hideModal()" class="modal__button--close"><i class="fa fa-close"></i></button>
             <header>Privacy</header>
-            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus sit
+            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus
+                sit
                 excepturi esse, nemo odio maiores. Magni aliquam architecto consequuntur quod earum ducimus similique
-                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic accusamus!
-                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis est
+                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic
+                accusamus!
+                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis
+                est
                 eum reiciendis.</article>
             <footer>
                 <a href="#none" role="button" onclick="hideModal()" class="button button--dark">Okey</a>
@@ -250,10 +225,13 @@
         <div class="modal__content">
             <button onclick="hideModal()" class="modal__button--close"><i class="fa fa-close"></i></button>
             <header>Terms</header>
-            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus sit
+            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus
+                sit
                 excepturi esse, nemo odio maiores. Magni aliquam architecto consequuntur quod earum ducimus similique
-                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic accusamus!
-                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis est
+                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic
+                accusamus!
+                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis
+                est
                 eum reiciendis.</article>
             <footer>
                 <a href="#none" role="button" onclick="hideModal()" class="button button--dark">Okey</a>
@@ -266,10 +244,13 @@
         <div class="modal__content">
             <button onclick="hideModal()" class="modal__button--close"><i class="fa fa-close"></i></button>
             <header>FAQ</header>
-            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus sit
+            <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate vel nam aliquam ut voluptatibus
+                sit
                 excepturi esse, nemo odio maiores. Magni aliquam architecto consequuntur quod earum ducimus similique
-                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic accusamus!
-                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis est
+                reiciendis in? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni beatae hic
+                accusamus!
+                Asperiores, odio quae. Deleniti inventore ea cupiditate iste ut ad quis, officiis fugit, perspiciatis
+                est
                 eum reiciendis.</article>
             <footer>
                 <a href="#none" role="button" onclick="hideModal()" class="button button--dark">Okey</a>
@@ -280,4 +261,5 @@
 
 </body>
 <script src="./assets/js/main.js"></script>
+
 </html>

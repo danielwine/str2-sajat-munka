@@ -5,7 +5,6 @@
   .screen {
     &__image {
       @include mixins.phone_element($small: true);
-      // margin-top: auto;
       margin-bottom: auto;
     }
   }
@@ -42,8 +41,6 @@
 
 @media screen and (max-width: 992px) {
   .navigation-bar {
-    background-color: colors.$white !important;
-
     &__brand {
       &:hover {
         color: colors.$yellow;
@@ -54,7 +51,7 @@
         a {
           color: colors.$black;
           &:hover {
-            color: colors.$grey;
+            color: colors.$lightgrey!important;
           }
         }
       }
@@ -75,6 +72,11 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1400px) {
+  .navigation-bar {
+    &__container {
+      flex-basis: 90%;
+    }
+  }
   .screen {
     &__text {
       &-h {
@@ -87,12 +89,40 @@
 @media screen and (max-width: 992px) {
   .navigation-bar {
     &__container {
-      width: 100%;
+      margin-top: 0.6em;
+      flex-basis: 100%;
     }
     &__brand {
       margin-left: 0.8em;
       margin-top: auto;
       margin-bottom: auto;
+    }
+    &__hamburger {
+      color: colors.$white;
+    }
+    &__menu {
+      background-color: colors.$white;
+      margin-top: 0.45em;
+      padding-top: 0.8em;
+      padding-bottom: 1em;
+      flex-basis: 100%;
+      opacity: 0%;
+      visibility: hidden;
+      transition: visibility 0s, opacity 0.5s linear;
+    }
+    span {
+      background-color: colors.$white;
+      border: 1px solid colors.$white;
+    }
+
+    &__scrolled {
+      .navigation-bar__hamburger {
+          color: colors.$black;
+      }
+      span {
+        background-color: colors.$black;
+        border: 1px solid colors.$black;
+      }      
     }
   }
   .screen {
@@ -107,24 +137,13 @@
     &__container {
       align-items: center;
     }
-    &__toggler {
+    &__hamburger {
       display: none;
     }
-
-    // &__hamburger {
-    //   display: none;
-    //   span {
-    //     display: none;
-    //   }
-    // }
 
     &__menu {
       display: flex !important;
       flex-direction: row !important;
-      // width: auto;
-      // margin-right: auto;
-      // margin-left: auto;
-      // color: black;
     }
   }
   .screen {
