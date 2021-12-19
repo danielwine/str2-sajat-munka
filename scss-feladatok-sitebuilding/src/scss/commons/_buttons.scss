@@ -1,0 +1,36 @@
+
+@use "../variables/colors";
+
+.button {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.75em;
+    letter-spacing: 0.2em;
+    min-width: 22em;
+    padding: 1.4em;
+    transition: all 0.3s;
+
+    &--dark {
+        display: inline;
+        background-color: colors.$lightgrey;
+        color: colors.$white;
+        border: 1px solid colors.$lightgrey;
+    }
+
+    &--light {
+        display: inline;
+        background-color: colors.$fwhite;
+        color: colors.$black;
+    }
+
+    &:hover {
+        color: colors.$black;
+        border: 1px solid colors.$yellow;
+        background-color: colors.$yellow;
+        transition: all 0.3s;
+    }
+}

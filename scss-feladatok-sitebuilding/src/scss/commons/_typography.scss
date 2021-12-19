@@ -1,0 +1,101 @@
+@use "../variables/colors";
+
+@font-face {
+    font-family: Catamaran;
+    src: url(../../fonts/catamaran/Catamaran-Light.ttf);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../../fonts/lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: Muli;
+    src: url(../../fonts/muli/Muli\ Regular\ 400.ttf);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+    font-family: Catamaran, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 4em !important;
+}
+
+h3 {
+    font-size: 3.4em !important;
+}
+
+h4 {
+    font-size: 3em !important;
+}
+
+h5 {
+    font-size: 2.1em !important;
+}
+
+h6 {
+    font-size: 1.25rem !important;
+}
+
+p {
+    font-family: Muli, Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.navigation-bar__menu a,
+a.button {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+.icon {
+    font-size: 5em;
+}
+
+.icon-heart {
+    color: colors.$dangerred;
+}
+
+.sm-icon {
+    box-sizing: border-box !important;
+    border-radius: 100em;
+    padding: 0.6em;
+    color: white;
+    width: 2.25em;
+    font-size: 2.4em !important;
+    opacity: 90%;
+}
+
+.sm-icon:hover {
+    opacity: 100%;
+}
+
+.sm-icon-tw {
+    background-color: colors.$social-twitter;
+}
+
+.sm-icon-fb {
+    background-color: colors.$social-facebook;
+}
+
+.sm-icon-gp {
+    background-color: colors.$social-google;
+}

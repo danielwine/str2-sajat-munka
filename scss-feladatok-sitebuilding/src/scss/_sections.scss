@@ -1,0 +1,158 @@
+@use "variables/colors";
+@use "mixins/sections" as mixins;
+
+section {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+}
+
+.screen {
+    background-image: url("/img/bg-pattern.png"), linear-gradient(to right, colors.$grad-left, colors.$grad-right);
+    color: colors.$white;
+    min-height: 100vh;
+    display: flex;
+    
+    &__container {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__row {
+        // text-lg-start!
+        //    text-align: center;
+        display: flex;
+    }
+
+    &__text {
+        margin: auto;
+        // text-align: left;
+        // mb-lg-0
+        &-h {
+            padding: 3em 0 0.6em 0;
+        }
+    }
+    &__image {
+        @include mixins.phone_element($small: false);
+    }
+}
+
+.highlighted {
+    background-color: colors.$yellow;
+
+    .row {
+        text-align: center;
+    }
+
+    &__column {
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+    &__badge {
+        width: 14em;
+        padding-bottom: 1rem;
+        // pb-lg-0
+    }
+    &__icons {
+        display: block;
+    }
+}
+
+.features {
+    p {
+        font-size: 1.2em;
+    }
+    i {
+        color: colors.$feat-icons;
+    }
+    hr {
+        color: colors.$black;
+    }
+
+    &__header {
+        @include mixins.margin-x-auto();
+    }
+    &__subtitle {
+        color: colors.$lightgrey;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    &__separator {
+        @include mixins.margin-x-auto();
+    }
+    &__image {
+        @include mixins.phone_element($small: false);
+    }
+    &__text {
+        @include mixins.margin-auto-flex();
+
+        &__item {
+            padding-bottom: 3rem;
+            // pb-lg-0
+
+            .hr-a {
+                margin-top: 0;
+            }
+            .hr-b {
+                margin-top: 3rem;
+                margin-bottom: 0;
+            }
+            p {
+                color: colors.$lightgrey;
+                margin: 0 3rem;
+            }
+        }
+    }
+}
+
+.cta {
+    background-image: url("/img/bg-cta.jpg");
+    background-position: 0px -248px;
+    color: white;
+    background-color: #0007;
+    background-blend-mode: darken;
+
+    .row {
+        height: 66vh;
+    }
+
+    &__text {
+        margin: auto 0 auto;
+        margin-left: 3rem;
+        // ms-lg-0
+    }
+}
+
+.footer {
+    font-family: Mulish, Helvetica, Arial, sans-serif;
+    background: colors.$grey;
+    color: colors.$lightgrey;
+    padding: 2.5em 0 2em 0;
+    text-align: center;
+
+    &__copyright {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__menu {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0;
+
+        li {
+            width: 160px;
+            list-style-type: none;
+        }
+    }
+ 
+    a {
+        color: colors.$lightgrey;
+        text-decoration: none;
+
+        &:hover {
+            color: colors.$yellow;
+        }
+    }
+}

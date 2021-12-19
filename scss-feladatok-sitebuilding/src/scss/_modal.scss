@@ -1,0 +1,89 @@
+@use "variables/colors";
+
+.overlay {
+    z-index: 2;
+}
+
+.layer {
+    &--hidden {
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+    }
+
+    &--visible {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        opacity: 50%;
+        background-color: colors.$modal-layer;
+        transition: opacity 0.15s ease-in-out;
+    }
+}
+
+.modal {
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    display: block;
+    height: auto;
+    width: 50%;
+    top: 30%;
+    left: 22%;
+    padding: 0em 2em 3em 2em;
+    z-index: 4;
+
+    header {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    article {
+        font-size: 0.95em;
+    }
+
+    footer {
+        float: right;
+        margin-top: 2em;
+    }
+
+    &__content {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        color: #555;
+        line-height: 2;
+        padding: 0.2em 0.8em 0.8em 1.2em;
+        text-align: justify;
+    }
+
+    &__button {
+        &--close {
+            float: right;
+            border: none;
+            background-color: colors.$white;
+            font-size: 1.5em;
+            margin-top: 1em;
+
+            &:hover {
+                color: colors.$yellow;
+            }
+        }
+    }
+
+    &--hidden {
+        display: none;
+        opacity: 0%;
+        transition: opacity 0.15s ease-in-out;
+    }
+    &--visible {
+        opacity: 100%;
+        transition: opacity 0.15s ease-in-out;
+    }
+}

@@ -1,0 +1,130 @@
+@use "variables/colors";
+
+.navigation-bar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    letter-spacing: 0.02em;
+    background: none;
+    display: flex;
+    justify-content: center;
+    height: 3.75em;
+
+    &__container {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        width: 72%;
+    }
+    &__brand {
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        font-size: 1.4rem !important;
+        text-decoration: none;
+        white-space: nowrap;
+        color: colors.$yellow;
+
+        &:hover {
+            color: colors.$white;
+        }
+    }
+
+    &__menu {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        margin: 0 auto;
+        margin: 0 1em 0 auto;
+        padding: 0;
+
+        li {
+            text-align: center;
+            a {
+                color: colors.$grey;
+                display: block;
+                font-size: 0.85rem;
+                line-height: 1rem;
+                padding: 1rem;
+                text-transform: uppercase;
+                color: colors.$fwhite;
+                text-decoration: none;
+
+                &:hover {
+                    color: colors.$white;
+                }
+            }
+        }
+    }
+    &__toggler {
+        display: flex;
+        border: 1px solid colors.$fwhite;
+        border-radius: 5px !important;
+        width: 70px;
+        font-size: 0.9em;
+        padding: 0em;
+        padding-left: 0.5em;
+        margin: auto 1em auto auto;
+
+        &-caption {
+            margin: auto;
+            user-select: none;
+        }
+        &:focus,
+        &:active {
+            box-shadow: 0px 0px 0 1px grey;
+        }
+    }
+
+    &__hamburger {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        height: 0.8rem;
+        padding: 0.75rem;
+        width: 0.9rem;
+
+        &-input[type="checkbox"] {
+            // display: none;
+
+            &:checked + .navigation-bar__menu {
+                display: flex;
+            }
+        }
+
+        span {
+            background-color: colors.$grey;
+            display: block;
+            height: 0px;
+            width: 1rem;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+    }
+
+    &__scrolled {
+        background: colors.$white;
+        .navigation-bar__menu {
+            li {
+                a {
+                    color: colors.$grey;
+
+                    &:hover {
+                        color: colors.$black;
+                    }
+                }
+            }
+        }
+        .navigation-bar__brand {
+            color: colors.$grey;
+
+            &:hover {
+                color: colors.$yellow;
+            }
+        }
+    }
+}

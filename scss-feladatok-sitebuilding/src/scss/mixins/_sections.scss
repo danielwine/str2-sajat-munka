@@ -1,0 +1,47 @@
+@mixin margin-x-auto() {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@mixin margin-auto-flex() {
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+@mixin phone_element($small: false) {
+    box-sizing: border-box!important;
+    display: flex;
+    margin: 3rem;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @if $small {
+        width: 280px;
+    } @else {
+        width: 420px;
+    }
+    height: 100%;
+
+    &__phone {
+        @if $small {
+            width: 280px;
+        } @else {
+            width: 350px;
+        }
+    }
+    &__screen {
+        position: absolute;
+        @if $small {
+            width: 246px;
+            top: 64px;
+            left: 17px;
+        } @else {
+            width: 307px;
+            top: 82px;
+            left: 57px;
+        }
+    }
+}
